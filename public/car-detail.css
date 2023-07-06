@@ -1,0 +1,34 @@
+table {
+    border-spacing: 0;
+}
+
+td {
+    padding-top: 10px;
+    border: 1px solid black;
+}
+
+td:first-child {
+    width: max-content;
+    padding-right: 50px;
+}
+
+td:last-child {
+    width: max-content;
+}
+
+#reply>div {
+    display: flex;
+}
+
+.reply-user-id {
+    flex: 1;
+}
+
+.reply-content {
+    flex: 4;
+}
+
+textarea {
+    width: 800px;
+    height: fit-content;
+}

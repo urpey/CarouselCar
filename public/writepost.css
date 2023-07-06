@@ -1,0 +1,48 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.images-container {
+    
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.forms {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.headborder {
+    border: 1px black solid;
+    width: 20%;
+}
+.formborder {
+    border: 1px black solid;
+    width: 80%;
+}
+.form span{
+    align-items: center;
+}
+
+#carousel-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

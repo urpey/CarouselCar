@@ -1,0 +1,315 @@
+body {
+    background-image: url(./bg2.jpg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#formtitle {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1C9678;
+    opacity: 1;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+    text-align: center;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.image-container {
+    width: 600px;
+    border: 1px black solid;
+    display: flex;
+
+    position: relative;
+    align-items: center;
+}
+
+.image-container input {
+    position: absolute;
+    top: 45%;
+    font-size: 2rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.image-container img {
+    object-fit: contain;
+}
+
+.images {
+    /* width: max-content; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    /* inset: 0; */
+    /* position: absolute; */
+    overflow-x: clip;
+    overflow-y: hidden;
+}
+
+/* .images > div {
+    display: flex;
+    width: max-content;
+} */
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.forms {
+    display: flex;
+    flex-direction: row;
+    border: 0.5px black solid;
+    background-color: #e8f4f1;
+
+
+}
+
+.forms:hover {
+    background-color: #fff;
+
+}
+
+.headborder {
+    border-right: 1px black solid;
+    width: 25%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #e8f4f1;
+    text-decoration: double;
+    font-size: 15px;
+}
+
+.input-class {
+
+    height: fit-content;
+}
+
+.previewclass {
+    font-size: 20px;
+    text-align: center;
+    height: fit-content;
+    color: blue;
+
+}
+
+.detailform {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-class {
+    width: fit-content;
+    height: fit-content;
+}
+
+.hidden {
+    display: none;
+}
+
+.limited {
+    max-width: 600px;
+    max-height: 300px;
+}
+
+
+
+.forms {
+    align-items: center;
+    display: flex;
+
+}
+
+#button-container {
+    justify-content: right;
+    display: flex;
+}
+
+
+#button-container #submit-btn,
+#preview-btn,
+#reset-btn,
+#edit-btn,
+#delete-btn,
+#reply-submit-btn,
+#reply-reset-btn {
+    background: #94b2cc;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+    cursor: pointer;
+
+    height: 50px;
+    width: 100px;
+    font: bold 15px arial, sans-serif;
+}
+
+#button-container #submit-btn:hover,
+#preview-btn:hover,
+#reset-btn:hover,
+#edit-btn:hover,
+#delete-btn:hover,
+#reply-submit-btn:hover,
+#reply-reset-btn:hover {
+    background: #016ABC;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+}
+
+#leave-btn {
+    background: #94b2cc;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+    cursor: pointer;
+
+    height: 50px;
+    width: 100px;
+    font: bold 15px arial, sans-serif;
+
+
+}
+
+#leave-btn a {
+    color: #fff;
+}
+
+#leave-btn:hover {
+    background: #016ABC;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+}
+
+#favr-btn {
+    background: #94b2cc;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+    cursor: pointer;
+
+    height: 50px;
+    width: 100px;
+    font: bold 15px arial, sans-serif;
+
+
+}
+
+#favr-btn a {
+    color: #fff;
+}
+
+#favr-btn:hover {
+    background: #016ABC;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+}
+
+#del-favr-btn {
+    background: #94b2cc;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+    cursor: pointer;
+
+    height: 50px;
+    width: 100px;
+    font: bold 15px arial, sans-serif;
+
+
+}
+
+#del-favr-btn a {
+    color: #fff;
+}
+
+#del-favr-btn:hover {
+    background: #016ABC;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+}
+
+#carousel-container {
+    width: 640px;
+
+
+
+}
+
+#myCarousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item {
+    /* width: 760px; */
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+#myCarousel img {
+    /* max-width: 100%;
+    max-height: 100%; */
+    inline-size: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    object-fit: fill;
+}
+
+#main-body {
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+}

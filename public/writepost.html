@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Post</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="post.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Carouselcar</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <a class="btn btn-primary navbar-btn" href="index.html">主頁</a>
+                <!-- <a class="btn btn-success navbar-btn" href="writepost.html">賣車</a> -->
+                <a class="btn btn-danger navbar-btn" href="/logout">登出</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class=".col-xs-6">
+
+
+
+                <form class="form" id="postform" method='POST' action='/sentpost' enctype="multipart/form-data"
+                    onkeydown="return event.key != 'Enter';">
+
+                    <div class="outer-container">
+
+                        <div class="form-container">
+                            <div id="formtitle">新增私人賣車</div>
+                            <!-- type -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="type">車類</label>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="radio" name="type" value="1" checked> <label for="1">私家車</label>
+                                    <input type="radio" name="type" value="2"> <label for="2">客貨車</label>
+                                    <input type="radio" name="type" value="3"> <label for="3">貨車</label>
+                                    <input type="radio" name="type" value="4"> <label for="4">電單車</label>
+                                    <input type="radio" name="type" value="5"> <label for="5">經典車</label>
+                                </div>
+                                <span class="previewclass" name="type-preview"></span>
+                            </div>
+                            <!-- manufacturer -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="manufacturer_id">車廠</label>
+                                </div>
+
+                                <div class="inputclass">
+                                    <select name="manufacturer_id" id="manufacturer_id">
+                                        <option value="" disabled>----------</option>
+                                        <option value="999">Other</option>
+                                    </select>
+                                </div>
+                                <span class="previewclass" name="manufacturer_id-preview"></span>
+                            </div>
+                            <!-- model -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="model">型號</label><span style="color:red">*</span>
+                                </div>
+                                <div class="inputclass">
+                                    <input list="modellist" type="text" name="model" maxlength="40" id="model"
+                                        autocomplete="off">
+                                    <datalist id="modellist">
+                                        <option></option>
+                                    </datalist>
+
+                                </div>
+                                <span class="previewclass" name="model-preview"></span>
+                            </div>
+                            <!-- number_of_seats -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="number_of_seats">座位</label><span style="color:red">*</span>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="number" name="number_of_seats" max="20">
+                                </div>
+                                <span class="previewclass" name="number_of_seats-preview"></span>
+                            </div>
+                            <!-- engineer_volume -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="engineer_volume">容積</label><span style="color:red">*</span>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="number" name="engineer_volume">
+                                </div>
+                                <span class="previewclass" name="engineer_volume-preview"></span>
+                            </div>
+                            <!-- auto_transmission -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="auto_transmission">傳動</label>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="radio" name="auto_transmission" value="true" checked> <label
+                                        for="true">自動波</label>
+                                    <input type="radio" name="auto_transmission" value="false"> <label
+                                        for="false">棍波</label>
+                                </div>
+                                <span class="previewclass" name="auto_transmission-preview"></span>
+                            </div>
+                            <!-- year of manufacturer -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="year_of_manufacturing">生產年份</label><span style="color:red">*</span>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="number" name="year_of_manufacturing" max="3000">
+                                </div>
+                                <span class="previewclass" name="year_of_manufacturing-preview"></span>
+                            </div>
+                            <!-- price -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="price">價格</label><span style="color:red">*</span>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="number" name="price">
+                                </div>
+                                <span class="previewclass" name="price-preview"></span>
+                            </div>
+                            <!-- discount -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="discountedPrice">折扣價（如有）</label>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="number" name="discounted_price">
+                                </div>
+                                <span class="previewclass" name="discounted_price-preview"></span>
+                            </div>
+                            <!-- image1 -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="image1">主圖（將用於首頁展示）<span style="color:red">*</span></label>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="file" name="image1" accept="image/*">
+                                </div>
+                                <span class="previewclass" name="image1-preview"></span>
+                            </div>
+                            <!-- image2 -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="image2">其他圖片（最多五張）</label>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="file" name="image2" accept="image/*" multiple onchange="readPreview(this)">
+                                </div>
+                                <span class="previewclass" name="image2-preview"></span>
+                            </div>
+                            <!-- contactname -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="contactName">聯絡人姓名</label>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="radio" name="contactId" value="true" checked> <label
+                                        for="contactId"></label>
+                                </div>
+                                <span class="previewclass hidden" name="contactId-preview"></span>
+                            </div>
+                            <!-- contactTel -->
+                            <div class="forms">
+                                <div class="headborder">
+                                    <label for="contacttel">聯絡人電話</label>
+                                </div>
+                                <div class="inputclass">
+                                    <input type="radio" name="contactTel" value="true" checked> <label
+                                        for="contactTel"></label>
+                                </div>
+                                <span class="previewclass hidden" name="contactTel-preview"></span>
+
+                </form>
+
+
+            </div>
+            <div id="button-container">
+                <input type="submit" value="送出" class="btn hidden" id="submit-btn">
+                <input type="button" value="預覽" class="btn" id="preview-btn">
+                <input type="reset" value="重設" class="btn" id="reset-btn">
+                <input type="button" value="修改" class="btn hidden" id="edit-btn">
+                <button id="leave-btn" onclick="toIndex()" class="btn">離開</button>
+            </div>
+
+
+
+
+            <!-- show image -->
+
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                </ol>
+
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="no-image.png" name="previewimage1" alt="image1">
+                    </div>
+
+                    <div class="item">
+                        <img src="no-image.png" name="previewimage2" alt="image2">
+                    </div>
+
+                    <div class="item">
+                        <img src="no-image.png" name="previewimage3" alt="image3">
+                    </div>
+
+                    <div class="item">
+                        <img src="no-image.png" name="previewimage4" alt="image4">
+                    </div>
+
+                    <div class="item">
+                        <img src="no-image.png" name="previewimage5" alt="image5">
+                    </div>
+
+                    <div class="item">
+                        <img src="no-image.png" name="previewimage6" alt="image6">
+                    </div>
+                </div>
+
+
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- leave -->
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="writepost.js"></script>
+
+</body>
+
+</html>

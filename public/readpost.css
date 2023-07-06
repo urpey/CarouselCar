@@ -1,0 +1,80 @@
+.reply-area{
+    max-height: 30%;
+    background-color: 123;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#1C9678;
+ 
+}
+#replyareaformtitle {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1C9678;
+    opacity: 1;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+    text-align: center;
+}
+.reply-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    background-color:#dee2e685;
+    margin: 1rem;
+
+    
+    font-family: verdana;
+    color:black;
+    font-size: 30px;
+    
+    border: 1px solid white;
+    
+}
+.reply-info-container{
+    width:30%;
+}
+
+.reply-content-container{
+    width: 70%;
+}
+
+.userIdentity{
+    border: solid 0.5px black;
+}
+.userName{
+    border: solid 0.5px black;
+    height:8rem;
+}
+.postName{
+    border: solid 0.5px black;
+}
+.replyContent{
+    border: solid 0.5px black;
+    height:8rem;
+}
+
+.favblock{
+ font-size: 20px !important;
+
+
+}
+.forms{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    
+    
+}
+
+#carousel-container {
+    width: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userName{
+    font-size: 16px;
+}
